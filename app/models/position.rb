@@ -1,3 +1,3 @@
 class Position < ApplicationRecord
-  validates :salary, {numericality: {greater_than: 0}}
+  validates :sallary, {numericality: {greater_than: 0}}
 end

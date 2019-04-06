@@ -1,0 +1,16 @@
+<h1>Add new department </h1>
+<h2>
+  <%= link_to "Home", root_path %>
+</h2>
+<% @positions.each do |position| %>
+  <tr>
+    <td><%= position.id %></td>
+    <td><%= position.name %></td>
+    <td><%= position.sallary %></td>
+    <td><%= position.vacations_days %></td>
+    <td><%= link_to 'Show', position_path(position) %></td>
+    <td><%= link_to 'Edit', edit_position_path(position) %></td>
+    <td><%= link_to 'Destroy', position_path(position), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+  </tr>
+  <hr>
+<% end %>

@@ -1,0 +1,17 @@
+<p>
+  <strong>Name:</strong>
+  <%= @position.name %>
+</p>
+<p>
+  <strong>Sallary:</strong>
+  <%= @position.sallary %>
+</p>
+<p>
+  <strong>Vacations days:</strong>
+  <%= @position.vacations_days %>
+</p>
+<tr>
+  <td><%= link_to 'Edit', edit_position_path%></td>
+  <td><%= link_to 'Destroy', position_path, method: :delete, data: { confirm: 'Are you sure?' }%>
+</tr>
+<%= link_to "View all positions", positions_path%>

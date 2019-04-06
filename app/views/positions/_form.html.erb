@@ -1,0 +1,17 @@
+<%= form_with scope: :position, url: positions_path, local: true do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :sallary %><br>
+    <%= form.text_field :sallary %>
+  </p>
+  <p>
+    <%= form.label :vacations_days %><br>
+    <%= form.text_field :vacations_days %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

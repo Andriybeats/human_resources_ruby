@@ -1,0 +1,13 @@
+<%= form_with scope: :department, url: departments_path, local: true do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :abbreviation %><br>
+    <%= form.text_field :abbreviation %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
