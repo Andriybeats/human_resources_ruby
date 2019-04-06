@@ -1,15 +1,18 @@
-<h1>Add new department </h1>
+<h1>History </h1>
 <h2>
   <%= link_to "Home", root_path %>
 </h2>
-<% @departments.each do |department| %>
+<% @stories.each do |history| %>
   <tr>
-    <td><%= department.id %></td>
-    <td><%= department.name %></td>
-    <td><%= department.abbreviation %></td>
-    <td><%= link_to 'Show', department_path(department) %></td>
-    <td><%= link_to 'Edit', edit_department_path(department) %></td>
-    <td><%= link_to 'Destroy', department_path(department), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+    <td><%= history.id %></td>
+    <td><%= history.name %></td>
+    <td><%= history.position %></td>
+    <td><%= history.date_start %></td>
+    <td><%= history.date_end %></td>
+    <td><%= history.employee %></td>
+    <td><%= link_to 'Show', history_path(history) %></td>
+    <td><%= link_to 'Edit', edit_history_path(history) %></td>
+    <td><%= link_to 'Destroy', history_path(history), method: :delete, data: { confirm: 'Are you sure?' }%></td>
   </tr>
   <hr>
 <% end %>

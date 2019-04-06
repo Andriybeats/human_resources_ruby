@@ -1,15 +1,15 @@
-<h1>Add new department </h1>
+<h1>Add new vacation </h1>
 <h2>
   <%= link_to "Home", root_path %>
 </h2>
-<% @departments.each do |department| %>
+<% @vacations.each do |vacation| %>
   <tr>
-    <td><%= department.id %></td>
-    <td><%= department.name %></td>
-    <td><%= department.abbreviation %></td>
-    <td><%= link_to 'Show', department_path(department) %></td>
-    <td><%= link_to 'Edit', edit_department_path(department) %></td>
-    <td><%= link_to 'Destroy', department_path(department), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+    <td><%= vacation.employee %></td>
+    <td><%= vacation.date_start %></td>
+    <td><%= vacation.date_end %></td>
+    <td><%= link_to 'Show', vacation_path(vacation) %></td>
+    <td><%= link_to 'Edit', edit_vacation_path(vacation) %></td>
+    <td><%= link_to 'Destroy', vacation_path(vacation), method: :delete, data: { confirm: 'Are you sure?' }%></td>
   </tr>
   <hr>
 <% end %>

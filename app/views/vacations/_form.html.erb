@@ -1,11 +1,15 @@
-<%= form_with scope: :department, url: departments_path, local: true do |form| %>
+<%= form_with scope: :vacation, url: vacations_path, local: true do |form| %>
   <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
+    <%= form.label :employee %><br>
+    <%= form.text_field :employee %>
   </p>
   <p>
-    <%= form.label :abbreviation %><br>
-    <%= form.text_field :abbreviation %>
+    <%= form.label :date_start %><br>
+    <%= form.text_field :date_start %>
+  </p>
+  <p>
+    <%= form.label :date_end %><br>
+    <%= form.text_field :date_end %>
   </p>
   <p>
     <%= form.submit %>

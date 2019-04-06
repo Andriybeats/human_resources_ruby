@@ -1,14 +1,21 @@
 <p>
-  <strong>Name:</strong>
-  <%= @department.name %>
+  <strong>Date start:</strong>
+  <%= @history.date_start %>
 </p>
-
 <p>
-  <strong>Abbreviation:</strong>
-  <%= @department.abbreviation %>
+  <strong>Date end:</strong>
+  <%= @history.date_end %>
+</p>
+<p>
+  <strong>Position:</strong>
+  <%= @history.position %>
+</p>
+<p>
+  <strong>Employee:</strong>
+  <%= @history.date_end %>
 </p>
 <tr>
-  <td><%= link_to 'Edit', edit_employees_path%></td>
-  <td><%= link_to 'Destroy', employee_path, method: :delete, data: { confirm: 'Are you sure?' }%>
+  <td><%= link_to 'Edit', edit_history_path%></td>
+  <td><%= link_to 'Destroy', history_path, method: :delete, data: { confirm: 'Are you sure?' }%>
 </tr>
-<%= link_to "View all departments", departments_path%>
+<%= link_to "View all departments", histories_path%>

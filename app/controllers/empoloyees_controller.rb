@@ -39,7 +39,7 @@ class EmpoloyeesController < ApplicationController
     @employee = Employee.find(params[:id])
     @employee.destroy
 
-    redirect_to departments_path
+    redirect_to employees_path
   end
 
   private

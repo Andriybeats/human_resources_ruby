@@ -39,7 +39,7 @@ class PositionsController < ApplicationController
     @position = Position.find(params[:id])
     @position.destroy
 
-    redirect_to departments_path
+    redirect_to positions_path
   end
 
   private

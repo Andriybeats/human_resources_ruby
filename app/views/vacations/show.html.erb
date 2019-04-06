@@ -1,11 +1,14 @@
 <p>
-  <strong>Name:</strong>
-  <%= @department.name %>
+  <strong>Employee:</strong>
+  <%= @vacation.employee %>
 </p>
-
 <p>
-  <strong>Abbreviation:</strong>
-  <%= @department.abbreviation %>
+  <strong>Date start:</strong>
+  <%= @vacation.date_start %>
+</p>
+<p>
+  <strong>Date end:</strong>
+  <%= @vacation.date_end %>
 </p>
 <tr>
   <td><%= link_to 'Edit', edit_employees_path%></td>
