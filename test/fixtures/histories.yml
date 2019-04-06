@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_start: 2019-04-01
+  date_end: 2019-04-01
+  employee: one
+  position: one
+
+two:
+  date_start: 2019-04-01
+  date_end: 2019-04-01
+  employee: two
+  position: two
