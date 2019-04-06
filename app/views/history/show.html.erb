@@ -7,4 +7,8 @@
   <strong>Abbreviation:</strong>
   <%= @department.abbreviation %>
 </p>
+<tr>
+  <td><%= link_to 'Edit', edit_employees_path%></td>
+  <td><%= link_to 'Destroy', employee_path, method: :delete, data: { confirm: 'Are you sure?' }%>
+</tr>
 <%= link_to "View all departments", departments_path%>

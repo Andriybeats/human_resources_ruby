@@ -1,24 +1,24 @@
 class EmpoloyeesController < ApplicationController
   def index
-    @positions = Position.all
+    @employees = Employee.all
   end
 
   def show
-    @position = Position.find(params[:id])
+    @employee = Employee.find(params[:id])
   end
 
   def new
-    @position = Position.new
+    @employee = Employee.new
   end
 
   def edit
-    @position = Position.find(params[:id])
+    @employee = Employee.find(params[:id])
   end
 
   def create
-    @position = Position.new(position_params)
-    if @position.save
-      redirect_to @position
+    @employee = Employee.new(position_params)
+    if @employee.save
+      redirect_to @employee
     else
       render 'new'
     end
@@ -26,24 +26,24 @@ class EmpoloyeesController < ApplicationController
   end
 
   def update
-    @position = Position.find(params[:id])
+    @employee = Position.find(params[:id])
 
-    if @position.update(article_params)
-      redirect_to @position
+    if @employee.update(employee_params)
+      redirect_to @employee
     else
       render 'edit'
     end
   end
 
   def destroy
-    @position = Position.find(params[:id])
-    @position.destroy
+    @employee = Employee.find(params[:id])
+    @employee.destroy
 
     redirect_to departments_path
   end
 
   private
-  def position_params
-    params.require(:position).permit(:name, :sallary, :vacations_days)
+  def employee_params
+    params.require(:employee).permit(:name, :surname, :date_birthday, :city_birthday, :address, :department, :start_work, :position)
   end
 end

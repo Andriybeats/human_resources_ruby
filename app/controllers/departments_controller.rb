@@ -29,7 +29,7 @@ class DepartmentsController < ApplicationController
   def update
     @department = Department.find(params[:id])
 
-    if @department.update(article_params)
+    if @department.update(department_params)
       redirect_to @department
     else
       render 'edit'

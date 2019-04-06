@@ -1,11 +1,35 @@
-<%= form_with scope: :department, url: departments_path, local: true do |form| %>
+<%= form_with scope: :employee, url: employees_path, local: true do |form| %>
   <p>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
   </p>
   <p>
-    <%= form.label :abbreviation %><br>
-    <%= form.text_field :abbreviation %>
+    <%= form.label :surname %><br>
+    <%= form.text_field :surname %>
+  </p>
+  <p>
+    <%= form.label :date_birthday %><br>
+    <%= form.text_field :date_birthday %>
+  </p>
+  <p>
+    <%= form.label :city_birthday %><br>
+    <%= form.text_field :city_birthday %>
+  </p>
+  <p>
+    <%= form.label :address %><br>
+    <%= form.text_field :address %>
+  </p>
+  <p>
+    <%= form.label :department%><br>
+    <%= form.text_field :department %>
+  </p>
+  <p>
+    <%= form.label :start_work %><br>
+    <%= form.text_field :start_work %>
+  </p>
+  <p>
+    <%= form.label :position %><br>
+    <%= form.text_field :position %>
   </p>
   <p>
     <%= form.submit %>

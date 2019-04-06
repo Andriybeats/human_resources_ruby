@@ -1,15 +1,21 @@
-<h1>Add new department </h1>
+<h1>Employess </h1>
 <h2>
   <%= link_to "Home", root_path %>
 </h2>
-<% @departments.each do |department| %>
+<% @employees.each do |employee| %>
   <tr>
-    <td><%= department.id %></td>
-    <td><%= department.name %></td>
-    <td><%= department.abbreviation %></td>
-    <td><%= link_to 'Show', department_path(department) %></td>
-    <td><%= link_to 'Edit', edit_department_path(department) %></td>
-    <td><%= link_to 'Destroy', department_path(department), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+    <td><%= employee.id %></td>
+    <td><%= employee.name %></td>
+    <td><%= employee.surname %></td>
+    <td><%= employee.date_birthday %></td>
+    <td><%= employee.city_birthday %></td>
+    <td><%= employee.address %></td>
+    <td><%= employee.department %></td>
+    <td><%= employee.start_work %></td>
+    <td><%= employee.position %></td>
+    <td><%= link_to 'Show', employee_path(employee) %></td>
+    <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+    <td><%= link_to 'Destroy', employee_path(employee), method: :delete, data: { confirm: 'Are you sure?' }%></td>
   </tr>
   <hr>
 <% end %>

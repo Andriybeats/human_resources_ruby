@@ -28,7 +28,7 @@ class PositionsController < ApplicationController
   def update
     @position = Position.find(params[:id])
 
-    if @position.update(article_params)
+    if @position.update(position_params)
       redirect_to @position
     else
       render 'edit'
