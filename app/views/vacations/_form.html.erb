@@ -1,7 +1,7 @@
 <%= form_with scope: :vacation, url: vacations_path, local: true do |form| %>
   <p>
     <%= form.label :employee %><br>
-    <%= form.text_field :employee %>
+    <%= form.collection_select(:employee_id, Employee.all, :id, :name, :prompt => 'Select') %>
   </p>
   <p>
     <%= form.label :date_start %><br>

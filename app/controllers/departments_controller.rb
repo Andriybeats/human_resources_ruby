@@ -43,6 +43,7 @@ class DepartmentsController < ApplicationController
     redirect_to departments_path
   end
 
+
   private
   def department_params
     params.require(:department).permit(:name, :abbreviation)

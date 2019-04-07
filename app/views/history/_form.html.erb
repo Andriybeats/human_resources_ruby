@@ -1,7 +1,7 @@
-<%= form_with scope: :history, url: history_path, local: true do |form| %>
+<%= form_with scope: :history, url: historys_path, local: true do |form| %>
   <p>
-    <%= form.label :position %><br>
-    <%= form.text_field :position %>
+    <%= form.label :employee %><br>
+    <%= form.collection_select(:employee_id, Employee.all, :id, :name, :prompt => 'Select') %>
   </p>
   <p>
     <%= form.label :date_start %><br>
@@ -11,9 +11,9 @@
     <%= form.label :date_end %><br>
     <%= form.text_field :date_end %>
   </p>  <p>
-  <%= form.label :employee %><br>
-  <%= form.text_field :employee %>
-</p>
+  <%= form.label :position %><br>
+  <%= form.collection_select(:employee_id, Position.all, :id, :name, :prompt => 'Select') %>
+  </p>
   <p>
     <%= form.submit %>
   </p>

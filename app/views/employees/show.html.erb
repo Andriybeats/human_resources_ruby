@@ -8,11 +8,11 @@
 </p>
 <p>
   <strong>Date birthday:</strong>
-  <%= @employee.date_birhday %>
+  <%= @employee.date_birthday %>
 </p>
 <p>
   <strong>City birthday:</strong>
-  <%= @employee.city_birhday %>
+  <%= @employee.city_birthday %>
 </p>
 <p>
   <strong>Address:</strong>
@@ -31,7 +31,7 @@
   <%= @employee.position %>
 </p>
 <tr>
-  <td><%= link_to 'Edit', edit_employees_path%></td>
+  <td><%= link_to 'Edit', edit_employee_path%></td>
   <td><%= link_to 'Destroy', employee_path, method: :delete, data: { confirm: 'Are you sure?' }%>
 </tr>
 <%= link_to "View all employees", employees_path%>

@@ -20,16 +20,13 @@
     <%= form.text_field :address %>
   </p>
   <p>
-    <%= form.label :department%><br>
-    <%= form.text_field :department %>
-  </p>
+    <%= form.select :department_id, options_from_collection_for_select(Department.all, :id, :name), :prompt => 'Select' %>  </p>
   <p>
     <%= form.label :start_work %><br>
     <%= form.text_field :start_work %>
   </p>
   <p>
-    <%= form.label :position %><br>
-    <%= form.text_field :position %>
+    <%= form.collection_select(:position_id, Position.all, :id, :name, :prompt => 'Select') %>
   </p>
   <p>
     <%= form.submit %>

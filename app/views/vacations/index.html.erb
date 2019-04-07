@@ -4,6 +4,7 @@
 </h2>
 <% @vacations.each do |vacation| %>
   <tr>
+    <td><%= vacation.id %></td>
     <td><%= vacation.employee %></td>
     <td><%= vacation.date_start %></td>
     <td><%= vacation.date_end %></td>

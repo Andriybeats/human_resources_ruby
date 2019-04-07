@@ -43,6 +43,6 @@ class HistoryController < ApplicationController
 
   private
   def history_params
-    params.require(:history).permit(:position, :date_start, :date_end)
+    params.require(:history).permit(:position_id, :date_start, :date_end, :employee_id )
   end
 end

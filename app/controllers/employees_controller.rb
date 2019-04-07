@@ -1,4 +1,4 @@
-class EmpoloyeesController < ApplicationController
+class EmployeesController < ApplicationController
   def index
     @employees = Employee.all
   end
@@ -16,7 +16,7 @@ class EmpoloyeesController < ApplicationController
   end
 
   def create
-    @employee = Employee.new(position_params)
+    @employee = Employee.new(employee_params)
     if @employee.save
       redirect_to @employee
     else
@@ -42,8 +42,9 @@ class EmpoloyeesController < ApplicationController
     redirect_to employees_path
   end
 
+
   private
   def employee_params
-    params.require(:employee).permit(:name, :surname, :date_birthday, :city_birthday, :address, :department, :start_work, :position)
+    params.require(:employee).permit(:name, :surname, :date_birthday, :city_birthday, :address, :department_id, :start_work, :position_id)
   end
 end
