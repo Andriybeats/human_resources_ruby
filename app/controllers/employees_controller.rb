@@ -1,4 +1,4 @@
-class EmpoloyeesController < ApplicationController
+class EmployeesController < ApplicationController
   def index
     @employees = Employee.all
   end
@@ -16,7 +16,7 @@ class EmpoloyeesController < ApplicationController
   end
 
   def create
-    @employee = Employee.new(position_params)
+    @employee = Employee.new(employee_params)
     if @employee.save
       redirect_to @employee
     else
@@ -38,7 +38,7 @@ class EmpoloyeesController < ApplicationController
   def destroy
     @employee = Employee.find(params[:id])
     @employee.destroy
-
+    ItemsMailer.employee_fired(@employee).deliver
     redirect_to employees_path
   end
 

@@ -10,9 +10,9 @@ RSpec.describe Position, type: :model do
     end
 =end
     it " a sallary" do
-      position =  Position.new(sallary: '')
+      position =  FactoryBot.build(:position)
       position.valid?
-      expect(position.errors[:sallary]).not_to be_empty
+      expect(sallary).to eq(1)
     end
   end
 

@@ -1,2 +1,2 @@
-module EmpoloyeesHelper
+module EmployeesHelper
 end
