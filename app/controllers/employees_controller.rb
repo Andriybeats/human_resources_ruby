@@ -29,7 +29,7 @@ class EmployeesController < ApplicationController
     @employee = Position.find(params[:id])
 
     if @employee.update(employee_params)
-      redirect_to @employee
+      redirect_to @employees
     else
       render 'edit'
     end
@@ -38,7 +38,7 @@ class EmployeesController < ApplicationController
   def destroy
     @employee = Employee.find(params[:id])
     @employee.destroy
-
+    #EmployeeMailer.employee_fired(@employee).deliver_now
     redirect_to employees_path
   end
 

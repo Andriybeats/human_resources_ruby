@@ -19,8 +19,8 @@
   <%= @employee.address %>
 </p>
 <p>
-  <strong>Department:</strong>
-  <%= @employee.department %>
+  <strong>Department1:</strong>
+  <%= @employee.department.name %>
 </p>
 <p>
   <strong>Start work:</strong>
@@ -28,7 +28,7 @@
 </p>
 <p>
   <strong>Position:</strong>
-  <%= @employee.position %>
+  <%= @employee.position.name %>
 </p>
 <tr>
   <td><%= link_to 'Edit', edit_employee_path%></td>

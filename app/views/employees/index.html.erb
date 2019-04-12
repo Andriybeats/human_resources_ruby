@@ -10,9 +10,9 @@
     <td><%= employee.date_birthday %></td>
     <td><%= employee.city_birthday %></td>
     <td><%= employee.address %></td>
-    <td><%= employee.department %></td>
+    <td><%= employee.department.name %></td>
     <td><%= employee.start_work %></td>
-    <td><%= employee.position %></td>
+    <td><%= employee.position.name %></td>
     <td><%= link_to 'Show', employee_path(employee) %></td>
     <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
     <td><%= link_to 'Destroy', employee_path(employee), method: :delete, data: { confirm: 'Are you sure?' }%></td>

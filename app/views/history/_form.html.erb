@@ -1,4 +1,4 @@
-<%= form_with scope: :history, url: historys_path, local: true do |form| %>
+<%= form_with scope: :history, url: history_index_path, local: true do |form| %>
   <p>
     <%= form.label :employee %><br>
     <%= form.collection_select(:employee_id, Employee.all, :id, :name, :prompt => 'Select') %>
