@@ -42,6 +42,9 @@ class EmployeesController < ApplicationController
     redirect_to employees_path
   end
 
+  def profile
+      #@employee
+  end
 
   private
   def employee_params
