@@ -3,7 +3,7 @@
   <%= @employee.name %>
 </p>
 <p>
-  <strong>Surame:</strong>
+  <strong>Surname:</strong>
   <%= @employee.surname %>
 </p>
 <p>
@@ -30,6 +30,9 @@
   <strong>Position:</strong>
   <%= @employee.position.name %>
 </p>
+  <strong>Email:</strong>
+  <%#= @employee.email %>
+
 <tr>
   <td><%= link_to 'Edit', edit_employee_path%></td>
   <td><%= link_to 'Destroy', employee_path, method: :delete, data: { confirm: 'Are you sure?' }%>

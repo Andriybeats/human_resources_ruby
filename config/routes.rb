@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :employees
-  #get 'employees', as: 'user_root'
+  #get 'employees/show', as: 'employee_root'
 
   resources :pages, :positions, :history, :departments, :vacations, :employees
 

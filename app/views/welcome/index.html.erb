@@ -3,41 +3,46 @@
 <div>
   <ul>
     <li>
-      <%= link_to "Sign up", new_employee_registration_path%>
-    </li>
-    <li>
-      <%= link_to "Sign in", new_employee_session_path%>
-    </li>
-    <hr/>
-    <li>
-      <%= link_to "Add department", new_department_path%>
-    </li>
-    <li>
-      <%= link_to "Show departments", departments_path %>
-    </li>
-    <li>
-      <%= link_to "Add position", new_position_path %>
-    </li>
-    <li>
-      <%= link_to "Show positions", positions_path %>
-    </li>
-    <li>
-      <%= link_to "Add employee", new_employee_path%>
-    </li>
-    <li>
-      <%= link_to "Show employees", employees_path %>
-    </li>
-    <li>
-      <%= link_to "Add vacation", new_vacation_path %>
-    </li>
-    <li>
-      <%= link_to "Show vacations", vacations_path %>
-    </li>
-    <li>
-      <%= link_to "Add history", new_history_path %>
-    </li>
-    <li>
-      <%= link_to "Show history", history_index_path %>
-    </li>
-  </ul>
+      <% if !employee_signed_in? %>
+        <%= link_to "Sign up", new_employee_registration_path%>
+        </li>
+        <li>
+          <%= link_to "Sign in", new_employee_session_path%>
+        </li>
+      <% else %>
+        <%= current_employee.email %>
+        <%= link_to 'Log out', destroy_employee_session_path, :method => :delete %>
+      <% end %>
+      <hr/>
+      <li>
+        <%= link_to "Add department", new_department_path%>
+      </li>
+      <li>
+        <%= link_to "Show departments", departments_path %>
+      </li>
+      <li>
+        <%= link_to "Add position", new_position_path %>
+      </li>
+      <li>
+        <%= link_to "Show positions", positions_path %>
+      </li>
+      <li>
+        <%= link_to "Add employee", new_employee_path%>
+      </li>
+      <li>
+        <%= link_to "Show employees", employees_path %>
+      </li>
+      <li>
+        <%= link_to "Add vacation", new_vacation_path %>
+      </li>
+      <li>
+        <%= link_to "Show vacations", vacations_path %>
+      </li>
+      <li>
+        <%= link_to "Add history", new_history_path %>
+      </li>
+      <li>
+        <%= link_to "Show history", history_index_path %>
+      </li>
+      </ul>
 </div>
