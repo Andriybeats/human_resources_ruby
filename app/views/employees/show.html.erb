@@ -30,9 +30,14 @@
   <strong>Position:</strong>
   <%= @employee.position.name %>
 </p>
+<p>
   <strong>Email:</strong>
-  <%#= @employee.email %>
-
+  <%= @employee.email %>
+</p>
+<p>
+  <strong>Confirmed</strong>
+  <%= @employee.unconfirmed_email %>
+</p>
 <tr>
   <td><%= link_to 'Edit', edit_employee_path%></td>
   <td><%= link_to 'Destroy', employee_path, method: :delete, data: { confirm: 'Are you sure?' }%>

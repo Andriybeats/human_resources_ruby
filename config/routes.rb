@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+
+  default_url_options :host => "http://localhost:3000"
+
+
   devise_for :employees
   #get 'employees/show', as: 'employee_root'
 

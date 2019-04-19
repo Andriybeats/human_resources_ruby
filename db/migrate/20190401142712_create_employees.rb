@@ -7,6 +7,7 @@ class CreateEmployees < ActiveRecord::Migration[5.2]
       t.string :city_birthday
       t.string :address
       t.date :start_work
+      t.string   :unconfirmed_email
       t.references :position, foreign_key: true
       t.references :department, foreign_key: true
 

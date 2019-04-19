@@ -14,6 +14,7 @@
     <td><%= employee.start_work %></td>
     <td><%= employee.position.name %></td>
     <td><%= employee.email %></td>
+    <td><%= employee.confirmed_at %></td>
     <td><%= link_to 'Show', employee_path(employee) %></td>
     <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
     <td><%= link_to 'Destroy', employee_path(employee), method: :delete, data: { confirm: 'Are you sure?' }%></td>
