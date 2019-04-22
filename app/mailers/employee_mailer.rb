@@ -1,5 +1,7 @@
-class EmployeesMailer < ApplicationMailer
+class EmployeeMailer < ApplicationMailer
   default from: 'airkongrent@gmail.com'
+  layout 'mailers/employees '
+
 
   def employee_fired(employee)
     @employee = employee

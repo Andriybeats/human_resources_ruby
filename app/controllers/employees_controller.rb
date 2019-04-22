@@ -37,8 +37,8 @@ class EmployeesController < ApplicationController
 
   def destroy
     @employee = Employee.find(params[:id])
-    @employee.destroy
     EmployeeMailer.employee_fired(@employee).deliver_now
+    @employee.destroy
     redirect_to employees_path
   end
 
