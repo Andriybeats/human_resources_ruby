@@ -16,7 +16,7 @@
     <td><%= employee.email %></td>
     <td><%= employee.confirmed_at %></td>
     <td>
-      <%= avatar_tag(employee.avatar.url, alt: 'Avatar') if employee.avatar? %>
+      <%= image_tag(employee.avatar.thumb.url, alt: 'Avatar') if employee.avatar? %>
     </td>
     <td><%= link_to I18n.t('links.show'), employee_path(employee) %></td>
     <td><%= link_to 'Edit', edit_employee_path(employee) %></td>

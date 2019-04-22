@@ -38,7 +38,7 @@ class EmployeesController < ApplicationController
   def destroy
     @employee = Employee.find(params[:id])
     @employee.destroy
-    #EmployeeMailer.employee_fired(@employee).deliver_now
+    EmployeeMailer.employee_fired(@employee).deliver_now
     redirect_to employees_path
   end
 
@@ -51,6 +51,10 @@ class EmployeesController < ApplicationController
       params.require(:employee).permit(:name,
                                        :surname,
                                        :date_birthday,
-                                       :city_birthday, :address, :department_id, :start_work, :position_id)
+                                       :city_birthday,
+                                       :address,
+                                       :department_id,
+                                       :start_work,
+                                       :position_id)
   end
 end

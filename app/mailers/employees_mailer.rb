@@ -1,10 +1,10 @@
-=begin
-class EmployeeMailer < ApplicationMailer
-  default (:from => "nabivanec.a@gmail,com", :to=>"nabivanec.a@gmail.com"), template_path: 'mailers/items'
-      def employee_fired(notification)
-        @notification = notification
-        @url  = "nabivanec.a@gmail,com"
-        mail(:subject => "New Notification")
-      end
+class EmployeesMailer < ApplicationMailer
+  default from: 'airkongrent@gmail.com'
+
+  def employee_fired(employee)
+    @employee = employee
+    @url  = 'airkongrent@gmail.com'
+    mail(to: @employee.email, subject: 'Something went wrong...')
+  end
+
 end
-=end
