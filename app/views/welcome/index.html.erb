@@ -9,8 +9,12 @@
         <li>
           <%= link_to "Sign in", new_employee_session_path%>
         </li>
+        <li>
+          <%= link_to "Sign in with Facebook", employee_facebook_omniauth_authorize_path   %>
+        </li>
       <% else %>
         <%= current_employee.email %>
+        <%= link_to I18n.t('links.show'), employee_path(current_employee) %>
         <%= link_to 'Log out', destroy_employee_session_path, :method => :delete %>
       <% end %>
       <hr/>

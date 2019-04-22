@@ -3,7 +3,10 @@ class Employee < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :confirmable
+         :confirmable, :omniauthable, :omniauth_providers => [:facebook]
+
+  mount_uploader :avatar, AvatarUploader
+
   belongs_to :position
   belongs_to :department
 =begin
@@ -20,4 +23,24 @@ class Employee < ApplicationRecord
     end
   end
 =end
+  def self.from_omniauth(auth)
+    employee = Employee.where(email: auth.info.email).first
+    if employee
+      return employee
+    else
+      where(provider: auth.provider, uid: auth.uid).first_or_create do |employee|
+        employee.email = auth.info.email
+        employee.password = Devise.friendly_token[0,20]
+        employee.name = auth.info.name
+        employee.avatar = auth.info.image
+        employee.uid = auth.uid
+        employee.provider = auth.provider
+
+        # If you are using confirmable and the provider(s) you use validate emails,
+        # uncomment the line below to skip the confirmation emails.
+        employee.skip_confirmation!
+      end
+    end
+  end
+
 end

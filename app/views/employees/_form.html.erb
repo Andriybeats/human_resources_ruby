@@ -26,6 +26,10 @@
     <%= form.text_field :start_work %>
   </p>
   <p>
+    <%= form.label :avatar %><br>
+    <%= form.file_field :avatar %>
+  </p>
+  <p>
     <%= form.collection_select(:position_id, Position.all, :id, :name, :prompt => 'Select') %>
   </p>
   <p>

@@ -18,12 +18,12 @@ class DepartmentsController < ApplicationController
 
   def create
     @department = Department.new(department_params)
+
     if @department.save
       redirect_to @department
     else
       render 'new'
     end
-
   end
 
   def update
@@ -43,8 +43,8 @@ class DepartmentsController < ApplicationController
     redirect_to departments_path
   end
 
-
   private
+
   def department_params
     params.require(:department).permit(:name, :abbreviation)
   end

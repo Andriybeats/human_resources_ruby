@@ -20,7 +20,7 @@ RSpec.describe DepartmentsController, type: :controller do
             invalid_data = attributes_for :department, name: '', status: 'wip'
 
             expect do
-              post :create, params: {department: invalid_data}
+              post :create, params: { department: invalid_data }
             end.not_to change(department, :count)
           end
         end
@@ -35,7 +35,7 @@ RSpec.describe DepartmentsController, type: :controller do
           end
 
           it 'redirects to department' do
-            put :update, params: {id: department, department: valid_department}
+            put :update, params: { id: department, department: valid_department }
 
             expect(response).to redirect_to(department)
           end
@@ -71,6 +71,5 @@ RSpec.describe DepartmentsController, type: :controller do
           expect(Department.exists?(department.id)).to be_falsy
         end
     end
-
   end
 end

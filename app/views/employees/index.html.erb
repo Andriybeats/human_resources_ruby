@@ -15,7 +15,10 @@
     <td><%= employee.position.name %></td>
     <td><%= employee.email %></td>
     <td><%= employee.confirmed_at %></td>
-    <td><%= link_to 'Show', employee_path(employee) %></td>
+    <td>
+      <%= avatar_tag(employee.avatar.url, alt: 'Avatar') if employee.avatar? %>
+    </td>
+    <td><%= link_to I18n.t('links.show'), employee_path(employee) %></td>
     <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
     <td><%= link_to 'Destroy', employee_path(employee), method: :delete, data: { confirm: 'Are you sure?' }%></td>
   </tr>

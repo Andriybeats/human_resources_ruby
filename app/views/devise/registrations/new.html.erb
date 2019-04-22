@@ -61,6 +61,10 @@
     <%= f.select :position_id, options_from_collection_for_select(Position.all, :id, :name), :prompt => 'Select' %>
   </div>
 
+  <div class="field">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar %>
+  </div>
   <hr/>
   <div class="actions">
     <%= f.submit "Sign up" %>

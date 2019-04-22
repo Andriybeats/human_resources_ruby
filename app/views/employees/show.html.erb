@@ -36,7 +36,11 @@
 </p>
 <p>
   <strong>Confirmed</strong>
-  <%= @employee.unconfirmed_email %>
+  <%= @employee.confirmed_at %>
+</p>
+<p>
+  <strong>Image:</strong>
+  <%= avatar_tag(@employee.avatar.url, alt: 'Avatar') if @employee.avatar? %>
 </p>
 <tr>
   <td><%= link_to 'Edit', edit_employee_path%></td>
