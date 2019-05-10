@@ -45,6 +45,7 @@ GEM
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
+    ast (2.4.0)
     bcrypt (3.1.12)
     bindex (0.6.0)
     bootsnap (1.4.2)
@@ -55,6 +56,7 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -85,6 +87,7 @@ GEM
     hashie (3.5.7)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
+    jaro_winkler (1.5.2)
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -135,7 +138,14 @@ GEM
       oauth2 (~> 1.1)
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
+    parallel (1.17.0)
+    parser (2.6.2.1)
+      ast (~> 2.4.0)
     pg (1.1.4)
+    pry (0.12.2)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    psych (3.1.0)
     public_suffix (3.0.3)
     puma (3.12.1)
     rack (2.0.6)
@@ -165,6 +175,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.19.0, < 2.0)
+    rainbow (3.0.0)
     rake (12.3.2)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
@@ -189,6 +200,15 @@ GEM
       rspec-mocks (~> 3.8.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
+    rubocop (0.67.2)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.5, != 2.5.1.1)
+      psych (>= 3.1.0)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 1.6)
+    ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
     sass (3.7.3)
       sass-listen (~> 4.0.0)
@@ -223,6 +243,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
+    unicode-display_width (1.5.0)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (3.7.0)
@@ -249,13 +270,15 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   letter_opener
   listen (>= 3.0.5, < 3.2)
-  mini_magick (~> 4.8)
+  mini_magick
   omniauth
   omniauth-facebook
   pg (>= 0.18, < 2.0)
+  pry
   puma (~> 3.11)
   rails (~> 5.2.2, >= 5.2.2.1)
   rspec-rails
+  rubocop (~> 0.67.2)
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
@@ -265,7 +288,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.4.5p335
+   ruby 2.6.3p62
 
 BUNDLED WITH
    2.0.1

@@ -1,3 +1,5 @@
+require 'csv'
+
 class Employee < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -23,6 +25,19 @@ class Employee < ApplicationRecord
     end
   end
 =end
+  # def self.to_csv
+  #   attributes = %w{id email name}
+  #
+  #   CSV.generate(headers: true) do |csv|
+  #     csv << attributes
+  #
+  #     all.each do |employee|
+  #       csv << attributes.map{ |attr| employee.send(attr) }
+  #     end
+  #   end
+  # end
+
+
   def self.from_omniauth(auth)
     employee = Employee.where(email: auth.info.email).first
     if employee
@@ -42,5 +57,4 @@ class Employee < ApplicationRecord
       end
     end
   end
-
 end

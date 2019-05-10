@@ -5,10 +5,13 @@ Rails.application.routes.draw do
 
   devise_for :employees, :controllers => { :omniauth_callbacks => "employees/omniauth_callbacks" }
 
-
+  resources :employees do
+    collection { post :import }
+  end
 
   #devise_for :employees
-  #get 'employees/show', as: 'employee_root'
+
+  get 'employees/export', as: 'employees_export'
 
   resources :pages, :positions, :history, :departments, :vacations, :employees
 

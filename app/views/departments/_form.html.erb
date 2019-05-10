@@ -2,6 +2,7 @@
   <p>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
+    <%= @department.errors[:name] %>
   </p>
   <p>
     <%= form.label :abbreviation %><br>
@@ -11,3 +12,4 @@
     <%= form.submit %>
   </p>
 <% end %>
+

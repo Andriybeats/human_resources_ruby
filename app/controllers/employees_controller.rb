@@ -1,7 +1,18 @@
+# require 'csv'
+
+
 class EmployeesController < ApplicationController
   def index
     @employees = Employee.all
+    EmployeesExport.new(@employees).call()
   end
+
+=begin
+  def import
+    Employee.import(params[:fempoleesile])
+    redirect_to root_url, notice: "Employees Uploaded successfully"
+  end
+=end
 
   def show
     @employee = Employee.find(params[:id])
@@ -9,6 +20,7 @@ class EmployeesController < ApplicationController
 
   def new
     @employee = Employee.new
+
   end
 
   def edit
@@ -38,7 +50,14 @@ class EmployeesController < ApplicationController
   def destroy
     @employee = Employee.find(params[:id])
     @employee.destroy
+=begin
     EmployeeMailer.employee_fired(@employee).deliver_now
+    redirect_to employees_path
+=end
+  end
+
+  def export
+    EmployeesExport.call(@employees)
     redirect_to employees_path
   end
 

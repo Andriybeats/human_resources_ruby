@@ -1,0 +1,19 @@
+current directory: /home/andrew/Rails/human_resouces/vendor/bundle/ruby/2.4.0/gems/byebug-11.0.1/ext/byebug
+/home/andrew/.rvm/rubies/ruby-2.4.5/bin/ruby -r ./siteconf20190422-4684-1m242xz.rb extconf.rb
+creating Makefile
+
+current directory: /home/andrew/Rails/human_resouces/vendor/bundle/ruby/2.4.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/andrew/Rails/human_resouces/vendor/bundle/ruby/2.4.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/andrew/Rails/human_resouces/vendor/bundle/ruby/2.4.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -m 0755 byebug.so ./.gem.20190422-4684-pzyzjp/byebug

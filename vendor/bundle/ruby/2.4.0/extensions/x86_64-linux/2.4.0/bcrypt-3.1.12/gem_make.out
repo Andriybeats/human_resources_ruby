@@ -1,0 +1,19 @@
+current directory: /home/andrew/Rails/human_resouces/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.12/ext/mri
+/home/andrew/.rvm/rubies/ruby-2.4.5/bin/ruby -r ./siteconf20190422-4684-w57j33.rb extconf.rb
+creating Makefile
+
+current directory: /home/andrew/Rails/human_resouces/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/andrew/Rails/human_resouces/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+current directory: /home/andrew/Rails/human_resouces/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bcrypt_ext.so ./.gem.20190422-4684-1ja3atm
